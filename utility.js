@@ -1,5 +1,5 @@
-//UC3
-//checking valid email
+//UC4
+//pre-define mobile formate
 function userRegistration()
 {
    var readline = require('readline');
@@ -8,12 +8,12 @@ function userRegistration()
      input: process.stdin,
      output: process.stdout
    });
-   rl.question("Enter the email : " , function(email){
-      const pet=/[a-zA-Z0-9]+([.+-_][a-zA-Z0-9]+)*@[a-zA-Z0-9]+.[a-z]{2,4}([.][a-z]{2})*/;
-      if(!pet.test(email))
-      console.log("Invalid");
+   rl.question("Enter the mobile number : " , function(number){
+      const pet=/((\+){1}91){1}[ ]*[0-9]{10}/;
+      if(!pet.test(number))
+      console.log("Invalid number");
       else
-      console.log("Valid email");
+      console.log("Valid number");
       rl.close();
    }
    );
