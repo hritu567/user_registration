@@ -1,5 +1,5 @@
-//UC4
-//pre-define mobile formate
+//UC5
+//pre-define password rule
 function userRegistration()
 {
    var readline = require('readline');
@@ -8,12 +8,12 @@ function userRegistration()
      input: process.stdin,
      output: process.stdout
    });
-   rl.question("Enter the mobile number : " , function(number){
-      const pet=/((\+){1}91){1}[ ]*[0-9]{10}/;
-      if(!pet.test(number))
-      console.log("Invalid number");
+   rl.question("Enter the password : " , function(password){
+      const pet=/[a-zA-Z0-9]{8,}/;
+      if(!pet.test(password))
+      console.log("Invalid password");
       else
-      console.log("Valid number");
+      console.log("Valid passord");
       rl.close();
    }
    );
