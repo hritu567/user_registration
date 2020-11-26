@@ -1,5 +1,5 @@
-//UC6
-//password rule-should have atleast 1 upper case
+//UC7
+//password rule-should have atleast 1 numeric umber
 function userRegistration()
 {
    var readline = require('readline');
@@ -9,7 +9,7 @@ function userRegistration()
      output: process.stdout
    });
    rl.question("Enter the password : " , function(password){
-      const pet=/([a-zA-Z0-9]*[A-Z]+[a-zA-Z0-9]*)/;
+      const pet=/(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}/;
       if(!pet.test(password))
       console.log("Invalid password");
       else
