@@ -1,5 +1,5 @@
-//UC7
-//password rule-should have atleast 1 numeric umber
+//UC8
+//password rule-has exactly 1 special character 
 function userRegistration()
 {
    var readline = require('readline');
@@ -9,7 +9,7 @@ function userRegistration()
      output: process.stdout
    });
    rl.question("Enter the password : " , function(password){
-      const pet=/(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}/;
+      const pet=/(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$#%*+]).{8,}/;
       if(!pet.test(password))
       console.log("Invalid password");
       else
